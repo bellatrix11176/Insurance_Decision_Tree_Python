@@ -1,0 +1,601 @@
+|--- At Fault Accidents <= 0.500
+| |--- Late Payments != No
+|   |   |--- Age <= 63.500
+| | | |--- Marital Status != S
+|   |   |   |   |--- Age <= 59.500
+|   |   |   |   |   |--- Age <= 34.500
+|   |   |   |   |   |   |--- Age <= 27.500
+|   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |--- Age >  27.500
+| | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 1.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 31.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  31.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  1.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |--- Age >  34.500
+|   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |--- Age >  59.500
+| | | | | |--- Gender != M
+|   |   |   |   |   |   |--- class: Low Risk
+| | | | | |--- Gender = M
+|   |   |   |   |   |   |--- class: Moderate Risk
+| | | |--- Marital Status = S
+| | | | |--- Payment Method != Monthly Billing
+| | | | | |--- Moving Violations != Yes
+|   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | |--- Moving Violations = Yes
+|   |   |   |   |   |   |--- Age <= 45.000
+|   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |--- Age <= 35.000
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  35.000
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |--- Age >  45.000
+|   |   |   |   |   |   |   |--- Age <= 46.500
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |--- Age >  46.500
+| | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |--- Age <= 49.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  49.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | |--- Payment Method = Monthly Billing
+|   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |--- Age >  63.500
+|   |   |   |--- Age <= 64.500
+|   |   |   |   |--- class: Low Risk
+|   |   |   |--- Age >  64.500
+|   |   |   |   |--- class: Moderate Risk
+| |--- Late Payments = No
+|   |   |--- Age <= 25.500
+| | | |--- Comprehensive Claims != Yes
+|   |   |   |   |--- Age <= 20.500
+|   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |--- Age >  20.500
+|   |   |   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |--- Number of Claims >  0.500
+| | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |--- Age <= 21.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  21.500
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |--- Number of Claims >  3.500
+|   |   |   |   |   |   |--- class: Moderate Risk
+| | | |--- Comprehensive Claims = Yes
+|   |   |   |   |--- class: Moderate Risk
+|   |   |--- Age >  25.500
+|   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |--- Age <= 41.500
+| | | | | |--- Payment Method != Bank Transfer
+| | | | | | |--- Payment Method != Credit Card
+| | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |--- Age <= 40.500
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+| | | | | | | | | | |--- Marital Status != M
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | | |--- Marital Status = M
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  40.500
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | |--- Payment Method = Credit Card
+|   |   |   |   |   |   |   |--- Number of Claims <= 1.500
+|   |   |   |   |   |   |   |   |--- Age <= 30.000
+| | | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  30.000
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Number of Claims >  1.500
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | |--- Payment Method = Bank Transfer
+|   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |--- Age <= 39.000
+|   |   |   |   |   |   |   |   |--- Age <= 35.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  35.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 36.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  36.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |--- Age >  39.000
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |--- Age <= 33.000
+|   |   |   |   |   |   |   |   |--- Age <= 27.500
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Age >  27.500
+| | | | | | | | | |--- Moving Violations != Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | | | |--- Moving Violations = Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |--- Age >  33.000
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |--- Age >  41.500
+| | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |--- Age <= 63.500
+|   |   |   |   |   |   |   |   |--- Age <= 45.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 44.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  44.500
+| | | | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- Age >  45.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |--- Age >  63.500
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+| | | | | | | | | |--- Gender != M
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | |--- Gender = M
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |--- Number of Claims >  2.500
+| | | | | | | |--- Marital Status != S
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | |--- Marital Status = S
+|   |   |   |   |   |   |   |   |--- Age <= 58.000
+|   |   |   |   |   |   |   |   |   |--- Age <= 49.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  49.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Age >  58.000
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |--- Age <= 51.500
+|   |   |   |   |   |   |   |--- Age <= 49.000
+|   |   |   |   |   |   |   |   |--- Age <= 43.500
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Age >  43.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |--- Age >  49.000
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+| | | | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |--- Age >  51.500
+| | | | | | | |--- Gender != M
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 57.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  57.500
+| | | | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | |--- Gender = M
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |--- Number of Claims >  3.500
+|   |   |   |   |--- class: Moderate Risk
+|--- At Fault Accidents >  0.500
+|   |--- At Fault Accidents <= 1.500
+| | |--- Late Payments != Yes
+|   |   |   |--- Age <= 38.500
+|   |   |   |   |--- Age <= 31.000
+|   |   |   |   |   |--- Age <= 21.000
+|   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |--- Age >  21.000
+| | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  3.500
+| | | | | | | | | |--- Moving Violations != Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | |--- Moving Violations = Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |--- Age >  31.000
+|   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |--- Number of Claims >  3.500
+|   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |--- Age >  38.500
+|   |   |   |   |--- Age <= 63.500
+|   |   |   |   |   |--- Age <= 55.500
+| | | | | | |--- Payment Method != Website Account
+| | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+| | | | | | | | | |--- Marital Status != S
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | | | | |--- Marital Status = S
+| | | | | | | | | | |--- Payment Method != Credit Card
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | | | | |--- Payment Method = Credit Card
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | |--- Gender = F
+| | | | | | | | |--- Payment Method != Credit Card
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 1.000
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 48.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  48.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  1.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Payment Method = Credit Card
+| | | | | | | | | |--- Moving Violations != No
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | | | |--- Moving Violations = No
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |--- Age <= 51.500
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Age >  51.500
+| | | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |--- Age >  55.500
+| | | | | | |--- Payment Method != Website Account
+| | | | | | | |--- Payment Method != Monthly Billing
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | |--- Payment Method = Monthly Billing
+| | | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | |--- Payment Method = Website Account
+| | | | | | | |--- Marital Status != M
+|   |   |   |   |   |   |   |   |--- Age <= 59.500
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Age >  59.500
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+| | | | | | | |--- Marital Status = M
+|   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |--- Age >  63.500
+|   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |--- Number of Claims >  2.500
+| | | | | | |--- Comprehensive Claims != Yes
+| | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | |--- Comprehensive Claims = Yes
+|   |   |   |   |   |   |   |--- class: Moderate Risk
+| | |--- Late Payments = Yes
+|   |   |   |--- Age <= 63.500
+| | | | |--- Gender != M
+|   |   |   |   |   |--- Age <= 43.000
+|   |   |   |   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |   |   |   |--- Age <= 29.500
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- Age >  29.500
+| | | | | | | | |--- Payment Method != Bank Transfer
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 40.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  40.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | | |--- Payment Method = Bank Transfer
+|   |   |   |   |   |   |   |   |   |--- Age <= 34.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Age >  34.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |--- Number of Claims >  3.500
+|   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |--- Age >  43.000
+|   |   |   |   |   |   |--- Number of Claims <= 4.500
+| | | | | | | |--- Payment Method != Bank Transfer
+| | | | | | | | |--- Marital Status != M
+| | | | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 55.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  55.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Marital Status = M
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | |--- Payment Method = Bank Transfer
+|   |   |   |   |   |   |   |   |--- Age <= 55.000
+| | | | | | | | | |--- Marital Status != M
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | |--- Marital Status = M
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |--- Age >  55.000
+|   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |--- Number of Claims >  4.500
+|   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | |--- Gender = M
+| | | | | |--- Payment Method != Credit Card
+|   |   |   |   |   |   |--- Age <= 54.500
+|   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- Number of Claims >  2.500
+| | | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |   |--- Age <= 28.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  28.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |--- Age >  54.500
+|   |   |   |   |   |   |   |--- Age <= 55.500
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Age >  55.500
+| | | | | | | | |--- Moving Violations != No
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 1.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  1.000
+|   |   |   |   |   |   |   |   |   |   |--- Number of Claims <= 3.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |   |--- Number of Claims >  3.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Moving Violations = No
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.000
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | |--- Payment Method = Credit Card
+|   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |--- Age <= 53.000
+|   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |--- Age >  53.000
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 1.500
+|   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Number of Claims >  1.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |--- Age >  63.500
+|   |   |   |   |--- Number of Claims <= 2.000
+|   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |--- Number of Claims >  2.000
+|   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |--- At Fault Accidents >  1.500
+|   |   |--- Age <= 59.500
+| | | |--- Moving Violations != Yes
+|   |   |   |   |--- Age <= 19.500
+| | | | | |--- Marital Status != S
+|   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | |--- Marital Status = S
+|   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |--- Age >  19.500
+|   |   |   |   |   |--- class: Potentially High Risk
+| | | |--- Moving Violations = Yes
+| | | | |--- Marital Status != M
+| | | | | |--- Payment Method != Credit Card
+|   |   |   |   |   |   |--- Number of Claims <= 0.500
+| | | | | | | |--- Gender != M
+| | | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |   |--- Age <= 35.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  35.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 41.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  41.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | |--- Gender = M
+|   |   |   |   |   |   |   |   |--- Age <= 40.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 28.000
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 24.000
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- Age >  24.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |--- Age >  28.000
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Age >  40.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |--- Age <= 25.500
+|   |   |   |   |   |   |   |   |--- Age <= 18.500
+| | | | | | | | | |--- Comprehensive Claims != Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | |--- Comprehensive Claims = Yes
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Age >  18.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- Age >  25.500
+| | | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 4.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 26.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |   |--- Age >  26.500
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  4.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 53.500
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- Age >  53.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 53.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  53.000
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+| | | | | |--- Payment Method = Credit Card
+|   |   |   |   |   |   |--- Age <= 51.500
+|   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+| | | | | | | | |--- Gender != M
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Gender = M
+|   |   |   |   |   |   |   |   |   |--- At Fault Accidents <= 2.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- At Fault Accidents >  2.500
+| | | | | | | | | | |--- Comprehensive Claims != Yes
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | | | | |--- Comprehensive Claims = Yes
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 4.000
+|   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Number of Claims >  4.000
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |--- Age >  51.500
+|   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | |--- Marital Status = M
+| | | | | |--- Late Payments != Yes
+| | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |--- At Fault Accidents <= 2.500
+|   |   |   |   |   |   |   |   |--- Age <= 36.000
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 3.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  3.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 28.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |   |--- Age >  28.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Age >  36.000
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+| | | | | | | | | | |--- Payment Method != Bank Transfer
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | | |--- Payment Method = Bank Transfer
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- At Fault Accidents >  2.500
+|   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |--- Age <= 56.500
+|   |   |   |   |   |   |   |   |--- Age <= 30.000
+|   |   |   |   |   |   |   |   |   |--- Age <= 27.000
+| | | | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- Age >  27.000
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |--- Age >  30.000
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |--- Age >  56.500
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |   |--- class: Low Risk
+| | | | | |--- Late Payments = Yes
+|   |   |   |   |   |   |--- Age <= 49.500
+|   |   |   |   |   |   |   |--- Number of Claims <= 1.500
+|   |   |   |   |   |   |   |   |--- Age <= 38.500
+| | | | | | | | | |--- Payment Method != Bank Transfer
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | | |--- Payment Method = Bank Transfer
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 27.000
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- Age >  27.000
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Age >  38.500
+|   |   |   |   |   |   |   |   |   |--- Age <= 43.500
+| | | | | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+| | | | | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Age >  43.500
+| | | | | | | | | | |--- Gender != F
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+| | | | | | | | | | |--- Gender = F
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |--- Number of Claims >  1.500
+|   |   |   |   |   |   |   |   |--- Age <= 39.000
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 4.500
+|   |   |   |   |   |   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  4.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Age >  39.000
+|   |   |   |   |   |   |   |   |   |--- Age <= 47.500
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 44.500
+|   |   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |   |   |--- Age >  44.500
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- Age >  47.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |--- Age >  49.500
+| | | | | | | |--- Payment Method != Monthly Billing
+| | | | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+|   |   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | | | |--- Comprehensive Claims = No
+|   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | |--- Payment Method = Monthly Billing
+|   |   |   |   |   |   |   |   |--- Number of Claims <= 0.500
+|   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |   |   |   |   |   |   |--- Number of Claims >  0.500
+| | | | | | | | | |--- Gender != M
+|   |   |   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | | | |--- Gender = M
+|   |   |   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+|   |   |--- Age >  59.500
+| | | |--- Payment Method != Bank Transfer
+| | | | |--- Late Payments != Yes
+|   |   |   |   |   |--- Number of Claims <= 2.500
+|   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |--- Number of Claims >  2.500
+|   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | |--- Late Payments = Yes
+| | | | | |--- Moving Violations != No
+| | | | | | |--- Comprehensive Claims != No
+|   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | | |--- Comprehensive Claims = No
+| | | | | | | |--- Payment Method != Website Account
+|   |   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | | | | | |--- Payment Method = Website Account
+|   |   |   |   |   |   |   |   |--- class: Potentially High Risk
+| | | | | |--- Moving Violations = No
+|   |   |   |   |   |   |--- Number of Claims <= 2.000
+|   |   |   |   |   |   |   |--- Age <= 63.500
+|   |   |   |   |   |   |   |   |--- class: Moderate Risk
+|   |   |   |   |   |   |   |--- Age >  63.500
+|   |   |   |   |   |   |   |   |--- class: Low Risk
+|   |   |   |   |   |   |--- Number of Claims >  2.000
+|   |   |   |   |   |   |   |--- class: High Risk - Do Not Insure
+| | | |--- Payment Method = Bank Transfer
+|   |   |   |   |--- class: Potentially High Risk
